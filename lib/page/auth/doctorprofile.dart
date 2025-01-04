@@ -6,6 +6,8 @@ import 'package:program/page/auth/profiledoktor.dart';
 import 'package:program/page/auth/setting.dart';
 
 class DoctorScreen extends StatefulWidget {
+  const DoctorScreen({super.key});
+
   @override
   _DoctorScreenState createState() => _DoctorScreenState();
 }
@@ -59,13 +61,13 @@ class _DoctorScreenState extends State<DoctorScreen> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () {
             Navigator.of(context).pop();
           },
         ),
-        title: Padding(
-          padding: const EdgeInsets.only(left: 30),
+        title: const Padding(
+          padding: EdgeInsets.only(left: 30),
           child: Text(
             "Patient Profile",
             style: TextStyle(
@@ -78,7 +80,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
         actions: [
           // Tambahkan tombol Exit di pojok kanan atas
           IconButton(
-            icon: Icon(Icons.exit_to_app, color: Colors.black), // Ikon exit
+            icon: const Icon(Icons.exit_to_app, color: Colors.black), // Ikon exit
             onPressed: () {
               // Tindakan untuk logout atau keluar dari aplikasi
               // Mengarahkan ke halaman utama pengguna (misalnya UserPage)
@@ -96,7 +98,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Box for Nutritionist Profile with round image
-            Row(
+            const Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CircleAvatar(
@@ -123,14 +125,14 @@ class _DoctorScreenState extends State<DoctorScreen> {
                 ),
               ],
             ),
-            SizedBox(height: 50),
+            const SizedBox(height: 50),
             Container(
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: Color(0xFFD9D9D9),
+                color: const Color(0xFFD9D9D9),
                 borderRadius: BorderRadius.circular(8),
               ),
-              child: Column(
+              child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
@@ -149,8 +151,8 @@ class _DoctorScreenState extends State<DoctorScreen> {
                 ],
               ),
             ),
-            SizedBox(height: 25),
-            Text(
+            const SizedBox(height: 25),
+            const Text(
               "Contact Details",
               style: TextStyle(
                 fontSize: 18,
@@ -158,24 +160,24 @@ class _DoctorScreenState extends State<DoctorScreen> {
                 color: Colors.black,
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             _buildContactDetail(Icons.phone, "+6281245873498"),
             _buildContactDetail(Icons.email, "alex@gmail.com"),
             _buildContactDetail(Icons.location_on,
                 "k-74,saraswati vihar, rohini, delhi-110085"),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Center(
               child: ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.black,
-                  padding: EdgeInsets.symmetric(vertical: 15, horizontal: 24),
+                  padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 24),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(25),
-                    side: BorderSide(color: Colors.green, width: 4),
+                    side: const BorderSide(color: Colors.green, width: 4),
                   ),
                 ),
-                child: Text(
+                child: const Text(
                   "BOOK APPOINTMENT",
                   style: TextStyle(
                     color: Colors.white,
@@ -189,7 +191,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.settings, size: 30, color: Colors.black),
             label: 'Settings',
@@ -225,11 +227,11 @@ class _DoctorScreenState extends State<DoctorScreen> {
       child: Row(
         children: [
           Icon(icon, color: Colors.black),
-          SizedBox(width: 16),
+          const SizedBox(width: 16),
           Expanded(
             child: Text(
               detail,
-              style: TextStyle(fontSize: 16, color: Colors.black),
+              style: const TextStyle(fontSize: 16, color: Colors.black),
             ),
           ),
         ],

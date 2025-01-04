@@ -9,9 +9,9 @@ class UserPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
-            colors: [const Color.fromARGB(255, 186, 231, 188), Colors.white],
+            colors: [Color.fromARGB(255, 186, 231, 188), Colors.white],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
           ),
@@ -24,7 +24,7 @@ class UserPage extends StatelessWidget {
               Align(
                 alignment: Alignment.topLeft,
                 child: IconButton(
-                  icon: Icon(Icons.arrow_back, color: Colors.black),
+                  icon: const Icon(Icons.arrow_back, color: Colors.black),
                   onPressed: () {
                     // Aksi untuk kembali
                     Navigator.pop(context);
@@ -36,7 +36,7 @@ class UserPage extends StatelessWidget {
                 'assets/images/patient.png',
                 width: 315,
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               ElevatedButton(
                 onPressed: () {
                   // Navigasi ke halaman LoginPage untuk Nutritionist
@@ -47,26 +47,26 @@ class UserPage extends StatelessWidget {
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.black,
-                  padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+                  padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(25),
-                    side: BorderSide(
-                        color: const Color.fromARGB(255, 141, 221, 144),
+                    side: const BorderSide(
+                        color: Color.fromARGB(255, 141, 221, 144),
                         width: 4),
                   ),
                 ),
-                child: Text(
+                child: const Text(
                   'Patient',
                   style: TextStyle(color: Colors.white),
                 ),
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               // Gambar kedua
               Image.asset(
                 'assets/images/doctor.png',
                 width: 315,
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               ElevatedButton(
                 onPressed: () {
                   // Navigasi ke halaman LoginPasienPage untuk Patient
@@ -78,13 +78,13 @@ class UserPage extends StatelessWidget {
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.black,
-                  padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+                  padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(25),
-                    side: BorderSide(color: Colors.green, width: 4),
+                    side: const BorderSide(color: Colors.green, width: 4),
                   ),
                 ),
-                child: Text(
+                child: const Text(
                   'Nutritionist',
                   style: TextStyle(color: Colors.white),
                 ),

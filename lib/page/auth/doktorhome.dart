@@ -12,6 +12,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,13 +23,15 @@ class MyApp extends StatelessWidget {
 }
 
 class DoctorHome extends StatefulWidget {
+  const DoctorHome({super.key});
+
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<DoctorHome> {
   int _selectedIndex = 0;
-  TextEditingController _textController = TextEditingController();
+  final TextEditingController _textController = TextEditingController();
 
   void _onItemTapped(int index) {
     setState(() {
@@ -81,7 +85,7 @@ class _HomeScreenState extends State<DoctorHome> {
         elevation: 0,
         actions: [
           IconButton(
-            icon: Icon(Icons.exit_to_app, color: Colors.black), // Ikon exit
+            icon: const Icon(Icons.exit_to_app, color: Colors.black), // Ikon exit
             onPressed: () {
               // Tindakan untuk logout atau keluar dari aplikasi
               // Mengarahkan ke halaman utama pengguna (misalnya HomePage)
@@ -89,12 +93,12 @@ class _HomeScreenState extends State<DoctorHome> {
                 context,
                 MaterialPageRoute(
                     builder: (context) =>
-                        UserPage()), // Ganti dengan halaman utama pengguna
+                        const UserPage()), // Ganti dengan halaman utama pengguna
               );
             },
           ),
           IconButton(
-            icon: Icon(Icons.notifications, color: Colors.black),
+            icon: const Icon(Icons.notifications, color: Colors.black),
             onPressed: () {
               Navigator.push(
                 context,
@@ -107,22 +111,22 @@ class _HomeScreenState extends State<DoctorHome> {
         ],
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(18),
+        padding: const EdgeInsets.all(18),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Header dengan avatar dan sapaan
             Row(
               children: [
-                CircleAvatar(
+                const CircleAvatar(
                   radius: 30,
                   backgroundImage: AssetImage('assets/images/profill.png'),
                 ),
-                SizedBox(width: 12),
+                const SizedBox(width: 12),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       'Welcome Nutrion',
                       style:
                           TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -135,13 +139,13 @@ class _HomeScreenState extends State<DoctorHome> {
                 ),
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             // Bagian "Manage Packages"
-            Text(
+            const Text(
               'My Aplication',
               style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: -0),
+            const SizedBox(height: -0),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -149,9 +153,9 @@ class _HomeScreenState extends State<DoctorHome> {
                 Container(
                   width: 120,
                   height: 100,
-                  padding: EdgeInsets.all(12),
+                  padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
-                    color: Color(0xFFD9D9D9),
+                    color: const Color(0xFFD9D9D9),
                     borderRadius: BorderRadius.circular(6),
                   ),
                   child: Column(
@@ -163,8 +167,8 @@ class _HomeScreenState extends State<DoctorHome> {
                         height: 50,
                         fit: BoxFit.contain,
                       ),
-                      SizedBox(height: 6),
-                      Text(
+                      const SizedBox(height: 6),
+                      const Text(
                         'Article',
                         style: TextStyle(color: Colors.black),
                         textAlign: TextAlign.center,
@@ -176,9 +180,9 @@ class _HomeScreenState extends State<DoctorHome> {
                 Container(
                   width: 120,
                   height: 100,
-                  padding: EdgeInsets.all(12),
+                  padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
-                    color: Color(0xFFD9D9D9),
+                    color: const Color(0xFFD9D9D9),
                     borderRadius: BorderRadius.circular(6),
                   ),
                   child: Column(
@@ -190,8 +194,8 @@ class _HomeScreenState extends State<DoctorHome> {
                         height: 50,
                         fit: BoxFit.contain,
                       ),
-                      SizedBox(height: 6),
-                      Text(
+                      const SizedBox(height: 6),
+                      const Text(
                         'Nutrion',
                         style: TextStyle(color: Colors.black),
                         textAlign: TextAlign.center,
@@ -203,9 +207,9 @@ class _HomeScreenState extends State<DoctorHome> {
                 Container(
                   width: 120,
                   height: 100,
-                  padding: EdgeInsets.all(12),
+                  padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
-                    color: Color(0xFFD9D9D9),
+                    color: const Color(0xFFD9D9D9),
                     borderRadius: BorderRadius.circular(6),
                   ),
                   child: Column(
@@ -217,8 +221,8 @@ class _HomeScreenState extends State<DoctorHome> {
                         height: 50,
                         fit: BoxFit.contain,
                       ),
-                      SizedBox(height: 6),
-                      Text(
+                      const SizedBox(height: 6),
+                      const Text(
                         'Reports',
                         style: TextStyle(color: Colors.black),
                         textAlign: TextAlign.center,
@@ -228,9 +232,9 @@ class _HomeScreenState extends State<DoctorHome> {
                 ),
               ],
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             // Teks "History Patient" di atas box
-            Text(
+            const Text(
               'History Patient',
               style: TextStyle(
                 fontSize: 15,
@@ -238,15 +242,15 @@ class _HomeScreenState extends State<DoctorHome> {
                 color: Colors.black,
               ),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             // Teks Pasien dalam satu box
             Container(
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: Color(0xFFD9D9D9),
+                color: const Color(0xFFD9D9D9),
                 borderRadius: BorderRadius.circular(8),
               ),
-              child: Column(
+              child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   // Teks Pasien 1
@@ -265,12 +269,12 @@ class _HomeScreenState extends State<DoctorHome> {
                 ],
               ),
             ),
-            SizedBox(height: 25), // Memberikan jarak setelah box
+            const SizedBox(height: 25), // Memberikan jarak setelah box
             // Upcoming Appointments Section
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   'Patient List',
                   style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                 ),
@@ -283,26 +287,26 @@ class _HomeScreenState extends State<DoctorHome> {
                       ),
                     );
                   },
-                  child: Text('See all'),
+                  child: const Text('See all'),
                 ),
               ],
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             // Appointment Card
             Container(
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
                 color: Colors.green[300],
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Row(
                 children: [
-                  CircleAvatar(
+                  const CircleAvatar(
                     radius: 24,
                     backgroundImage: AssetImage('assets/images/ivan.png'),
                   ),
-                  SizedBox(width: 16),
-                  Expanded(
+                  const SizedBox(width: 16),
+                  const Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -323,12 +327,12 @@ class _HomeScreenState extends State<DoctorHome> {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.black,
                       padding:
-                          EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                          const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                       ),
                     ),
-                    child: Text('View Appointment',
+                    child: const Text('View Appointment',
                         style: TextStyle(color: Colors.white)),
                   ),
                 ],
@@ -338,7 +342,7 @@ class _HomeScreenState extends State<DoctorHome> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.settings, size: 30, color: Colors.black),
             label: 'Settings',

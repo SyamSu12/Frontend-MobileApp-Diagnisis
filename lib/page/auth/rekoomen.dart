@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Rekoomen extends StatelessWidget {
+  const Rekoomen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -8,7 +10,7 @@ class Rekoomen extends StatelessWidget {
         backgroundColor: Colors.green[300],
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () {
             Navigator.of(context).pop(); // This should work correctly
           },
@@ -17,7 +19,7 @@ class Rekoomen extends StatelessWidget {
           Stack(
             children: [
               IconButton(
-                icon: Icon(Icons.notifications, color: Colors.black),
+                icon: const Icon(Icons.notifications, color: Colors.black),
                 onPressed: () {
                   // Add notification action here
                 },
@@ -28,15 +30,15 @@ class Rekoomen extends StatelessWidget {
                 child: Container(
                   width: 16,
                   height: 16,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.red,
                     shape: BoxShape.circle,
                   ),
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       '2',
                       style: TextStyle(
-                          color: const Color.fromARGB(255, 142, 140, 140),
+                          color: Color.fromARGB(255, 142, 140, 140),
                           fontSize: 10),
                     ),
                   ),
@@ -54,7 +56,7 @@ class Rekoomen extends StatelessWidget {
             width: double.infinity,
             padding:
                 const EdgeInsets.symmetric(horizontal: 16.0, vertical: 20.0),
-            child: Row(
+            child: const Row(
               children: [
                 CircleAvatar(
                   backgroundImage: AssetImage(
@@ -85,7 +87,7 @@ class Rekoomen extends StatelessWidget {
               color: Colors.white,
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: ListView(
-                children: [
+                children: const [
                   InfoCard(
                     title: 'Mikronutrient',
                     description:
@@ -115,7 +117,7 @@ class InfoCard extends StatelessWidget {
   final String title;
   final String description;
 
-  const InfoCard({required this.title, required this.description});
+  const InfoCard({super.key, required this.title, required this.description});
 
   @override
   Widget build(BuildContext context) {
@@ -132,15 +134,15 @@ class InfoCard extends StatelessWidget {
           children: [
             Text(
               title,
-              style: TextStyle(
+              style: const TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
                   color: Colors.black), // Text color set to black
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text(
               description,
-              style: TextStyle(
+              style: const TextStyle(
                   fontSize: 14, color: Colors.black), // Text color set to black
             ),
           ],

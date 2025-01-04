@@ -5,6 +5,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,6 +16,8 @@ class MyApp extends StatelessWidget {
 }
 
 class NotificationsPage extends StatelessWidget {
+  const NotificationsPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,12 +25,12 @@ class NotificationsPage extends StatelessWidget {
           Colors.white, // Set background color of the Scaffold to white
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pop(context); // Go back to the previous screen
           },
         ),
-        title: Text(
+        title: const Text(
           'Notifications',
           style: TextStyle(color: Colors.black),
         ),
@@ -37,7 +41,7 @@ class NotificationsPage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: ListView(
-          children: [
+          children: const [
             NotificationCard(
               profileImage: 'assets/images/profill.png',
               name: 'Alex Nutritionist',
@@ -81,7 +85,7 @@ class NotificationCard extends StatelessWidget {
   final String time;
   final bool hasCloseButton;
 
-  const NotificationCard({
+  const NotificationCard({super.key, 
     required this.profileImage,
     required this.name,
     required this.message,
@@ -112,7 +116,7 @@ class NotificationCard extends StatelessWidget {
                     color: Colors.black.withOpacity(0.3),
                     spreadRadius: 2,
                     blurRadius: 5,
-                    offset: Offset(0, 3),
+                    offset: const Offset(0, 3),
                   ),
                 ],
               ),
@@ -121,24 +125,24 @@ class NotificationCard extends StatelessWidget {
                 radius: 27,
               ),
             ),
-            SizedBox(width: 10),
+            const SizedBox(width: 10),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     name,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
                     ),
                   ),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   Text(
                     message,
-                    style: TextStyle(fontSize: 14, color: Colors.black),
+                    style: const TextStyle(fontSize: 14, color: Colors.black),
                   ),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   Text(
                     time,
                     style: TextStyle(fontSize: 12, color: Colors.grey[700]),
@@ -148,7 +152,7 @@ class NotificationCard extends StatelessWidget {
             ),
             if (hasCloseButton)
               IconButton(
-                icon: Icon(Icons.close),
+                icon: const Icon(Icons.close),
                 onPressed: () {},
                 color: Colors.black,
               ),

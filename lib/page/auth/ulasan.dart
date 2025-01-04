@@ -9,6 +9,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,6 +21,8 @@ class MyApp extends StatelessWidget {
 }
 
 class NutritionistListScreen extends StatefulWidget {
+  const NutritionistListScreen({super.key});
+
   @override
   _NutritionistListScreenState createState() => _NutritionistListScreenState();
 }
@@ -75,12 +79,12 @@ class _NutritionistListScreenState extends State<NutritionistListScreen> {
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () {
             Navigator.pop(context);
           },
         ),
-        title: Center(
+        title: const Center(
           child: Text(
             "NUTRITIONIST",
             style: TextStyle(
@@ -101,7 +105,7 @@ class _NutritionistListScreenState extends State<NutritionistListScreen> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.settings, size: 30, color: Colors.black),
             label: 'Settings',
@@ -133,12 +137,14 @@ class _NutritionistListScreenState extends State<NutritionistListScreen> {
 }
 
 class NutritionistCard extends StatelessWidget {
+  const NutritionistCard({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 16.0),
       child: Container(
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
           color: Colors.grey[300],
           borderRadius: BorderRadius.circular(12),
@@ -146,44 +152,44 @@ class NutritionistCard extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            CircleAvatar(
+            const CircleAvatar(
               radius: 30,
               backgroundImage: AssetImage(
                   'assets/images/profill.png'), // Ganti dengan gambar Anda
             ),
-            SizedBox(width: 30),
+            const SizedBox(width: 30),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "Alex Nutritionist",
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Text(
+                  const Text(
                     "10:00 AM to 7:00 PM",
                     style: TextStyle(
                       fontSize: 14,
                       color: Colors.grey,
                     ),
                   ),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   Row(
                     children: [
                       Row(
                         children: List.generate(5, (index) {
-                          return Icon(
+                          return const Icon(
                             Icons.star,
                             color: Colors.amber,
                             size: 20,
                           );
                         }),
                       ),
-                      SizedBox(width: 8),
-                      Text(
+                      const SizedBox(width: 8),
+                      const Text(
                         "4.9",
                         style: TextStyle(fontSize: 16),
                       ),
@@ -193,7 +199,7 @@ class NutritionistCard extends StatelessWidget {
               ),
             ),
             IconButton(
-              icon: Icon(
+              icon: const Icon(
                 Icons.favorite_border,
                 color: Colors.grey,
               ),

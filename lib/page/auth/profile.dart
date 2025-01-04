@@ -5,6 +5,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,13 +16,15 @@ class MyApp extends StatelessWidget {
 }
 
 class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white, // Set background color to white
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () {
             // Menambahkan aksi untuk kembali ke halaman sebelumnya
             Navigator.pop(context);
@@ -34,8 +38,8 @@ class ProfilePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 20),
-            Center(
+            const SizedBox(height: 20),
+            const Center(
               child: Text(
                 'My Profile',
                 style: TextStyle(
@@ -44,7 +48,7 @@ class ProfilePage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             Center(
               child: Column(
                 children: [
@@ -52,21 +56,21 @@ class ProfilePage extends StatelessWidget {
                   Container(
                     width: 88,
                     height: 88,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                     ),
-                    child: CircleAvatar(
+                    child: const CircleAvatar(
                       radius: 40,
                       backgroundImage: AssetImage('assets/images/ivan.png'),
                       backgroundColor: Colors.black,
                     ),
                   ),
-                  SizedBox(height: 10),
-                  Text(
+                  const SizedBox(height: 10),
+                  const Text(
                     'Nutritionist',
                     style: TextStyle(fontSize: 18),
                   ),
-                  Row(
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(Icons.star, color: Colors.amber, size: 20),
@@ -85,19 +89,19 @@ class ProfilePage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 30),
-            Divider(),
+            const SizedBox(height: 30),
+            const Divider(),
             ListTile(
-              leading: Icon(Icons.person_outline),
-              title: Text('Your profile'),
+              leading: const Icon(Icons.person_outline),
+              title: const Text('Your profile'),
               onTap: () {},
             ),
             ListTile(
-              leading: Icon(Icons.history),
-              title: Text('History Transaction'),
+              leading: const Icon(Icons.history),
+              title: const Text('History Transaction'),
               onTap: () {},
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Text(
               'Security',
               style: TextStyle(
@@ -107,16 +111,16 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             ListTile(
-              leading: Icon(Icons.lock_outline),
-              title: Text('Change password'),
+              leading: const Icon(Icons.lock_outline),
+              title: const Text('Change password'),
               onTap: () {},
             ),
             ListTile(
-              leading: Icon(Icons.lock_outline),
-              title: Text('Forgot password'),
+              leading: const Icon(Icons.lock_outline),
+              title: const Text('Forgot password'),
               onTap: () {},
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Text(
               'General',
               style: TextStyle(
@@ -126,18 +130,18 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             ListTile(
-              leading: Icon(Icons.notifications_outlined),
-              title: Text('Notification'),
+              leading: const Icon(Icons.notifications_outlined),
+              title: const Text('Notification'),
               onTap: () {},
             ),
             ListTile(
-              leading: Icon(Icons.language_outlined),
-              title: Text('Languages'),
+              leading: const Icon(Icons.language_outlined),
+              title: const Text('Languages'),
               onTap: () {},
             ),
             ListTile(
-              leading: Icon(Icons.help_outline),
-              title: Text('Help and Support'),
+              leading: const Icon(Icons.help_outline),
+              title: const Text('Help and Support'),
               onTap: () {},
             ),
           ],

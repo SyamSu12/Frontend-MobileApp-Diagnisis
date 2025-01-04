@@ -6,6 +6,8 @@ import 'package:program/page/auth/profiledoktor.dart';
 import 'package:program/page/auth/setting.dart'; // Import halaman NutritionistProfile
 
 class ListScreen extends StatefulWidget {
+  const ListScreen({super.key});
+
   @override
   _ListScreenState createState() => _ListScreenState();
 }
@@ -61,12 +63,12 @@ class _ListScreenState extends State<ListScreen> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () {
             Navigator.of(context).pop();
           },
         ),
-        title: Text(
+        title: const Text(
           "",
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
@@ -76,24 +78,24 @@ class _ListScreenState extends State<ListScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Add more space to move everything down
-          SizedBox(height: 20), // Adjust this to move content lower
+          const SizedBox(height: 20), // Adjust this to move content lower
 
           // Teks "Appointments" dengan center alignment
-          Center(
+          const Center(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
+              padding: EdgeInsets.symmetric(horizontal: 16),
               child: Text(
                 "List Patient",
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
             ),
           ),
-          SizedBox(height: 40),
+          const SizedBox(height: 40),
 
           // Konten janji temu berdasarkan tab
           Expanded(
             child: ListView(
-              padding: EdgeInsets.symmetric(horizontal: 16),
+              padding: const EdgeInsets.symmetric(horizontal: 16),
               children: [
                 if (_tabIndex == 0) ...[
                   // Tampilkan janji temu upcoming
@@ -113,7 +115,7 @@ class _ListScreenState extends State<ListScreen> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.settings, size: 30, color: Colors.black),
             label: 'Settings',
@@ -150,7 +152,7 @@ class _ListScreenState extends State<ListScreen> {
         backgroundColor: _tabIndex == index
             ? Colors.black
             : Colors.grey, // Use backgroundColor
-        padding: EdgeInsets.symmetric(horizontal: 24, vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 10),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
         ),
@@ -162,7 +164,7 @@ class _ListScreenState extends State<ListScreen> {
       },
       child: Text(
         label,
-        style: TextStyle(
+        style: const TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.bold,
             color: Colors.white), // Text color
@@ -181,8 +183,8 @@ class _ListScreenState extends State<ListScreen> {
         );
       },
       child: Card(
-        color: Color.fromRGBO(85, 220, 85, 0.498),
-        margin: EdgeInsets.symmetric(vertical: 12),
+        color: const Color.fromRGBO(85, 220, 85, 0.498),
+        margin: const EdgeInsets.symmetric(vertical: 12),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15),
         ),
@@ -190,30 +192,30 @@ class _ListScreenState extends State<ListScreen> {
           padding: const EdgeInsets.all(16.0),
           child: Row(
             children: [
-              CircleAvatar(
+              const CircleAvatar(
                 backgroundImage: AssetImage('assets/images/ivan.png'),
                 radius: 30,
               ),
-              SizedBox(width: 14),
+              const SizedBox(width: 14),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       "Mr. Ivan",
                       style:
                           TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                     ),
-                    Text(
+                    const Text(
                         "want to fix appointment with you for medical checkup."),
-                    SizedBox(height: 8),
+                    const SizedBox(height: 8),
                     Container(
-                      padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                       decoration: BoxDecoration(
                         color: Colors.black,
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Text(
+                      child: const Text(
                         "5:30pm to 6:30pm",
                         style: TextStyle(color: Colors.white, fontSize: 14),
                       ),
@@ -221,7 +223,7 @@ class _ListScreenState extends State<ListScreen> {
                   ],
                 ),
               ),
-              Icon(
+              const Icon(
                 Icons.arrow_forward_ios,
                 color: Colors.black,
                 size: 18,

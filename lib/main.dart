@@ -61,12 +61,12 @@ class MyApp extends StatelessWidget {
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
 
-        scaffoldBackgroundColor: Color.fromARGB(255, 221, 246, 221),
+        scaffoldBackgroundColor: const Color.fromARGB(255, 221, 246, 221),
 
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: SplashPage(),
+      home: const SplashPage(),
     );
   }
 }

@@ -5,6 +5,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,6 +17,8 @@ class MyApp extends StatelessWidget {
 }
 
 class PossibleDiseaseScreen extends StatelessWidget {
+  const PossibleDiseaseScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,8 +27,8 @@ class PossibleDiseaseScreen extends StatelessWidget {
         backgroundColor: Colors.green[700],
         elevation: 0,
         toolbarHeight: 140,
-        flexibleSpace: Padding(
-          padding: const EdgeInsets.fromLTRB(16, 60, 16, 0),
+        flexibleSpace: const Padding(
+          padding: EdgeInsets.fromLTRB(16, 60, 16, 0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -53,7 +57,7 @@ class PossibleDiseaseScreen extends StatelessWidget {
         ),
         actions: [
           IconButton(
-            icon: Icon(Icons.notifications),
+            icon: const Icon(Icons.notifications),
             color: Colors.white,
             onPressed: () {},
           ),
@@ -63,24 +67,24 @@ class PossibleDiseaseScreen extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            DiseaseCard(
+            const DiseaseCard(
               title: 'Iron Deficiency Anemia',
               description:
                   'A lack of iron leads to low hemoglobin production, causing fatigue, paleness, and shortness of breath. It is often due to insufficient iron intake or blood loss.',
             ),
-            SizedBox(height: 10),
-            DiseaseCard(
+            const SizedBox(height: 10),
+            const DiseaseCard(
               title: 'Folate Deficiency Anemia',
               description:
                   'Insufficient folic acid reduces red blood cell production, causing fatigue and shortness of breath. Common in pregnant women and those with poor diets or absorption problems.',
             ),
-            SizedBox(height: 10),
-            DiseaseCard(
+            const SizedBox(height: 10),
+            const DiseaseCard(
               title: 'Anemia of Chronic Disease',
               description:
                   'Chronic illness or inflammation interferes with iron usage, leading to low hemoglobin levels. Symptoms include fatigue and weakness, despite normal or elevated iron stores.',
             ),
-            Spacer(),
+            const Spacer(),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -88,9 +92,9 @@ class PossibleDiseaseScreen extends StatelessWidget {
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.black,
-                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                   ),
-                  child: Text(
+                  child: const Text(
                     'Contact Nutritionist',
                     style: TextStyle(color: Colors.white),
                   ),
@@ -99,16 +103,16 @@ class PossibleDiseaseScreen extends StatelessWidget {
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.black,
-                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                   ),
-                  child: Text(
+                  child: const Text(
                     'Recommended Drugs',
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
               ],
             ),
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
           ],
         ),
       ),
@@ -123,19 +127,19 @@ class PossibleDiseaseScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
               ),
               child:
-                  Icon(Icons.home, size: 24, color: Colors.black), // Ikon Home
+                  const Icon(Icons.home, size: 24, color: Colors.black), // Ikon Home
             ),
             label: '', // Menghilangkan teks label
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(Icons.settings, size: 24, color: Colors.black),
             label: 'Settings',
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: Icon(Icons.message, size: 24, color: Colors.black),
             label: 'Messages',
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             icon: CircleAvatar(
               radius: 15,
               backgroundImage:
@@ -158,7 +162,7 @@ class DiseaseCard extends StatelessWidget {
   final String title;
   final String description;
 
-  const DiseaseCard({
+  const DiseaseCard({super.key, 
     required this.title,
     required this.description,
   });
@@ -177,15 +181,15 @@ class DiseaseCard extends StatelessWidget {
           children: [
             Text(
               title,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text(
               description,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 14,
                 color: Colors.black87,
               ),

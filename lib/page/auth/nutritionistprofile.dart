@@ -7,6 +7,8 @@ import 'package:program/page/auth/setting.dart';
 import 'package:program/page/auth/ulasan.dart';
 
 class NutritionistProfileScreen extends StatefulWidget {
+  const NutritionistProfileScreen({super.key});
+
   @override
   _NutritionistProfileScreenState createState() =>
       _NutritionistProfileScreenState();
@@ -64,13 +66,13 @@ class _NutritionistProfileScreenState extends State<NutritionistProfileScreen> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () {
             Navigator.of(context).pop();
           },
         ),
-        title: Padding(
-          padding: const EdgeInsets.only(left: 30),
+        title: const Padding(
+          padding: EdgeInsets.only(left: 30),
           child: Text(
             "Nutritionist Profile",
             style: TextStyle(
@@ -97,30 +99,30 @@ class _NutritionistProfileScreenState extends State<NutritionistProfileScreen> {
                   height: 120,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
-                    image: DecorationImage(
+                    image: const DecorationImage(
                       image: AssetImage('assets/images/ivann.png'),
                       fit: BoxFit.cover,
                     ),
                   ),
                 ),
-                SizedBox(width: 16), // Jarak antara gambar dan teks
+                const SizedBox(width: 16), // Jarak antara gambar dan teks
                 // Kolom untuk teks profil
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      "Nutritionist Alex",
+                    const Text(
+                      "Mr. Ivan",
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
                       ),
                     ),
-                    Text(
+                    const Text(
                       "Gastro Specialist",
                       style: TextStyle(fontSize: 16, color: Colors.black54),
                     ),
-                    SizedBox(height: 8),
+                    const SizedBox(height: 8),
                     GestureDetector(
                       onTap: () {
                         // Navigasi ke halaman ulasan
@@ -130,7 +132,7 @@ class _NutritionistProfileScreenState extends State<NutritionistProfileScreen> {
                               builder: (context) => NutritionistListScreen()),
                         );
                       },
-                      child: Row(
+                      child: const Row(
                         children: [
                           Icon(Icons.star, color: Colors.amber),
                           Text(
@@ -149,8 +151,8 @@ class _NutritionistProfileScreenState extends State<NutritionistProfileScreen> {
                 ),
               ],
             ),
-            SizedBox(height: 80),
-            Text(
+            const SizedBox(height: 80),
+            const Text(
               "Contact Details",
               style: TextStyle(
                 fontSize: 18,
@@ -158,12 +160,12 @@ class _NutritionistProfileScreenState extends State<NutritionistProfileScreen> {
                 color: Colors.black,
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             _buildContactDetail(Icons.phone, "+6281245873498"),
             _buildContactDetail(Icons.email, "alex@gmail.com"),
             _buildContactDetail(Icons.location_on,
                 "k-74,saraswati vihar,ph-1\nrohini,delhi-110085"),
-            SizedBox(height: 50),
+            const SizedBox(height: 50),
             // Membuat tombol "BOOK APPOINTMENT" rata tengah
             Center(
               child: ElevatedButton(
@@ -178,13 +180,14 @@ class _NutritionistProfileScreenState extends State<NutritionistProfileScreen> {
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.black,
-                  padding: EdgeInsets.symmetric(vertical: 15, horizontal: 24),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 15, horizontal: 24),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(25),
-                    side: BorderSide(color: Colors.green, width: 4),
+                    side: const BorderSide(color: Colors.green, width: 4),
                   ),
                 ),
-                child: Text(
+                child: const Text(
                   "BOOK APPOINTMENT",
                   style: TextStyle(
                     color: Colors.white,
@@ -198,7 +201,7 @@ class _NutritionistProfileScreenState extends State<NutritionistProfileScreen> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.settings, size: 30, color: Colors.black),
             label: 'Settings',
@@ -234,11 +237,11 @@ class _NutritionistProfileScreenState extends State<NutritionistProfileScreen> {
       child: Row(
         children: [
           Icon(icon, color: Colors.black),
-          SizedBox(width: 16),
+          const SizedBox(width: 16),
           Expanded(
             child: Text(
               detail,
-              style: TextStyle(fontSize: 16, color: Colors.black),
+              style: const TextStyle(fontSize: 16, color: Colors.black),
             ),
           ),
         ],

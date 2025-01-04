@@ -9,16 +9,18 @@ class SignUpScreen extends StatelessWidget {
   final TextEditingController _confirmPasswordController =
       TextEditingController();
 
+  SignUpScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor:
-          Color.fromARGB(255, 221, 246, 221), // Light green background
+          const Color.fromARGB(255, 221, 246, 221), // Light green background
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () {
             Navigator.of(context).pop(); // Go back to previous screen
           },
@@ -30,7 +32,7 @@ class SignUpScreen extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text(
+              const Text(
                 "SIGNUP",
                 style: TextStyle(
                   fontSize: 24,
@@ -38,20 +40,20 @@ class SignUpScreen extends StatelessWidget {
                   color: Colors.black,
                 ),
               ),
-              SizedBox(height: 24),
+              const SizedBox(height: 24),
               _buildTextField(_firstNameController, "First Name", Icons.person),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               _buildTextField(_lastNameController, "Last Name", Icons.person),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               _buildTextField(_emailController, "Email", Icons.email),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               _buildTextField(_passwordController, "Password", Icons.lock,
                   isPassword: true),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               _buildTextField(
                   _confirmPasswordController, "Confirm Password", Icons.lock,
                   isPassword: true),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
@@ -63,7 +65,7 @@ class SignUpScreen extends StatelessWidget {
 
                     if (password != confirmPassword) {
                       // Show error if passwords don't match
-                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                         content: Text("Passwords do not match!"),
                         backgroundColor: Colors.red,
                       ));
@@ -73,21 +75,21 @@ class SignUpScreen extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) =>
-                                LoginPage()), // Navigate to login page
+                                const LoginPage()), // Navigate to login page
                       );
                     }
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.black,
-                    padding: EdgeInsets.symmetric(vertical: 16),
+                    padding: const EdgeInsets.symmetric(vertical: 16),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(25),
-                      side: BorderSide(
-                          color: const Color.fromARGB(255, 77, 187, 81),
+                      side: const BorderSide(
+                          color: Color.fromARGB(255, 77, 187, 81),
                           width: 2),
                     ),
                   ),
-                  child: Text(
+                  child: const Text(
                     "SIGNUP",
                     style: TextStyle(
                       color: Colors.white,
@@ -97,11 +99,11 @@ class SignUpScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     "Already have an account? ",
                     style: TextStyle(color: Colors.black),
                   ),
@@ -112,10 +114,10 @@ class SignUpScreen extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) =>
-                                LoginPage()), // Navigate to login page
+                                const LoginPage()), // Navigate to login page
                       );
                     },
-                    child: Text(
+                    child: const Text(
                       "Login",
                       style: TextStyle(
                         color: Colors.green,
@@ -149,7 +151,7 @@ class SignUpScreen extends StatelessWidget {
         fillColor: Colors.white,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(25),
-          borderSide: BorderSide(color: Colors.green),
+          borderSide: const BorderSide(color: Colors.green),
         ),
       ),
     );

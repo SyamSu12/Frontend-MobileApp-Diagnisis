@@ -19,7 +19,7 @@ class _CreateNewPasswordPageState extends State<CreateNewPasswordPage> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () {
             Navigator.pop(context); // Kembali ke halaman sebelumnya
           },
@@ -31,7 +31,7 @@ class _CreateNewPasswordPageState extends State<CreateNewPasswordPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
+              const Text(
                 'CREATE NEW PASSWORD',
                 style: TextStyle(
                   fontSize: 24,
@@ -39,7 +39,7 @@ class _CreateNewPasswordPageState extends State<CreateNewPasswordPage> {
                 ),
               ),
               const SizedBox(height: 16),
-              Text(
+              const Text(
                 'Your New Password Must Be Different\nFrom Previously Used Password',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 16),
@@ -76,8 +76,8 @@ class _CreateNewPasswordPageState extends State<CreateNewPasswordPage> {
                     left: 16,
                     child: Row(
                       children: List.generate(10, (index) {
-                        return Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 2),
+                        return const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 2),
                           child: Text(
                             '*', // Tanda bintang
                             style: TextStyle(
@@ -124,8 +124,8 @@ class _CreateNewPasswordPageState extends State<CreateNewPasswordPage> {
                     left: 16,
                     child: Row(
                       children: List.generate(10, (index) {
-                        return Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 2),
+                        return const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 2),
                           child: Text(
                             '*', // Tanda bintang
                             style: TextStyle(
@@ -152,16 +152,16 @@ class _CreateNewPasswordPageState extends State<CreateNewPasswordPage> {
                       borderRadius: BorderRadius.circular(30),
                     ),
                     padding:
-                        EdgeInsets.symmetric(horizontal: 100, vertical: 16),
+                        const EdgeInsets.symmetric(horizontal: 100, vertical: 16),
                   ),
                   onPressed: () {
                     // Arahkan ke halaman Login setelah password berhasil disimpan
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (context) => LoginPage()),
+                      MaterialPageRoute(builder: (context) => const LoginPage()),
                     );
                   },
-                  child: Text(
+                  child: const Text(
                     'SAVE',
                     style: TextStyle(fontSize: 16, color: Colors.white),
                   ),

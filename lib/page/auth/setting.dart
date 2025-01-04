@@ -5,6 +5,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,6 +16,8 @@ class MyApp extends StatelessWidget {
 }
 
 class SettingsPage extends StatelessWidget {
+  const SettingsPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,13 +26,13 @@ class SettingsPage extends StatelessWidget {
         backgroundColor: Colors.white, // Make the AppBar background white
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () {
             Navigator.pop(context);
           },
         ),
-        title: Padding(
-          padding: const EdgeInsets.only(top: 8.0), // Menurunkan teks "Setting"
+        title: const Padding(
+          padding: EdgeInsets.only(top: 8.0), // Menurunkan teks "Setting"
           child: Text(
             'Setting',
             style: TextStyle(
@@ -44,7 +48,7 @@ class SettingsPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 40), // Menambahkan jarak setelah AppBar
+            const SizedBox(height: 40), // Menambahkan jarak setelah AppBar
             Text(
               'Personal Info',
               style: TextStyle(
@@ -54,21 +58,21 @@ class SettingsPage extends StatelessWidget {
               ),
             ),
             ListTile(
-              leading: Icon(Icons.person_outline),
-              title: Text('Your profile'),
+              leading: const Icon(Icons.person_outline),
+              title: const Text('Your profile'),
               onTap: () {},
             ),
             ListTile(
-              leading: Icon(Icons.history),
-              title: Text('History Transaction'),
+              leading: const Icon(Icons.history),
+              title: const Text('History Transaction'),
               onTap: () {},
             ),
             ListTile(
-              leading: Icon(Icons.delete_outline),
-              title: Text('Delete Account'),
+              leading: const Icon(Icons.delete_outline),
+              title: const Text('Delete Account'),
               onTap: () {},
             ),
-            Divider(),
+            const Divider(),
             Text(
               'Security',
               style: TextStyle(
@@ -78,16 +82,16 @@ class SettingsPage extends StatelessWidget {
               ),
             ),
             ListTile(
-              leading: Icon(Icons.lock_outline),
-              title: Text('Change password'),
+              leading: const Icon(Icons.lock_outline),
+              title: const Text('Change password'),
               onTap: () {},
             ),
             ListTile(
-              leading: Icon(Icons.lock_open_outlined),
-              title: Text('Forgot password'),
+              leading: const Icon(Icons.lock_open_outlined),
+              title: const Text('Forgot password'),
               onTap: () {},
             ),
-            Divider(),
+            const Divider(),
             Text(
               'General',
               style: TextStyle(
@@ -97,18 +101,18 @@ class SettingsPage extends StatelessWidget {
               ),
             ),
             ListTile(
-              leading: Icon(Icons.notifications_outlined),
-              title: Text('Notification'),
+              leading: const Icon(Icons.notifications_outlined),
+              title: const Text('Notification'),
               onTap: () {},
             ),
             ListTile(
-              leading: Icon(Icons.language_outlined),
-              title: Text('Languages'),
+              leading: const Icon(Icons.language_outlined),
+              title: const Text('Languages'),
               onTap: () {},
             ),
             ListTile(
-              leading: Icon(Icons.help_outline),
-              title: Text('Help and Support'),
+              leading: const Icon(Icons.help_outline),
+              title: const Text('Help and Support'),
               onTap: () {},
             ),
           ],

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class DrugsScreen extends StatelessWidget {
+  const DrugsScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -9,7 +11,7 @@ class DrugsScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black), // Ikon warna hitam
+          icon: const Icon(Icons.arrow_back, color: Colors.black), // Ikon warna hitam
           onPressed: () {
             Navigator.pop(context); // Untuk kembali ke halaman sebelumnya
           },
@@ -20,7 +22,7 @@ class DrugsScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
+            const Text(
               'Nutrion',
               style: TextStyle(
                 color: Colors.black, // Ubah teks menjadi hitam
@@ -28,14 +30,14 @@ class DrugsScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             Center(
               child: Image.asset(
                 'assets/images/drugs.png', // Gambar utama
                 height: 200,
               ),
             ),
-            SizedBox(height: 60),
+            const SizedBox(height: 60),
             Expanded(
               child: GridView.count(
                 crossAxisCount: 3, // Jumlah kolom
@@ -76,12 +78,12 @@ class DrugsScreen extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
             height: 10), // Jarak sedikit lebih besar antara gambar dan nama
         Text(
           name,
           textAlign: TextAlign.center,
-          style: TextStyle(
+          style: const TextStyle(
               fontSize: 16, color: Colors.black), // Ukuran teks lebih besar
         ),
       ],

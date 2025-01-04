@@ -13,7 +13,7 @@ class LoginPasienPage extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () {
             Navigator.pop(context); // Menavigasi kembali ke halaman sebelumnya
           },
@@ -25,7 +25,7 @@ class LoginPasienPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 40),
-            Center(
+            const Center(
               child: Text(
                 'LOGIN',
                 style: TextStyle(
@@ -35,7 +35,7 @@ class LoginPasienPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 40),
-            Text(
+            const Text(
               'EMAIL',
               style: TextStyle(fontWeight: FontWeight.bold, letterSpacing: 1),
             ),
@@ -43,15 +43,15 @@ class LoginPasienPage extends StatelessWidget {
             TextFormField(
               decoration: InputDecoration(
                 hintText: 'ivan@gmail.com',
-                prefixIcon: Icon(Icons.email_outlined),
+                prefixIcon: const Icon(Icons.email_outlined),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(30),
-                  borderSide: BorderSide(color: Colors.black, width: 1.5),
+                  borderSide: const BorderSide(color: Colors.black, width: 1.5),
                 ),
               ),
             ),
             const SizedBox(height: 24),
-            Text(
+            const Text(
               'Password',
               style: TextStyle(fontWeight: FontWeight.bold, letterSpacing: 1),
             ),
@@ -60,8 +60,8 @@ class LoginPasienPage extends StatelessWidget {
               obscureText: true,
               decoration: InputDecoration(
                 hintText: 'Password',
-                prefixIcon: Icon(Icons.lock_outline),
-                suffixIcon: Icon(Icons.visibility_off_outlined),
+                prefixIcon: const Icon(Icons.lock_outline),
+                suffixIcon: const Icon(Icons.visibility_off_outlined),
                 filled: true,
                 fillColor: Colors.grey[300],
                 border: OutlineInputBorder(
@@ -85,7 +85,7 @@ class LoginPasienPage extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => Forgotpasien()),
                   );
                 },
-                child: Text(
+                child: const Text(
                   'Forgot Password?',
                   style: TextStyle(color: Colors.black54),
                 ),
@@ -100,7 +100,7 @@ class LoginPasienPage extends StatelessWidget {
                     borderRadius:
                         BorderRadius.circular(50), // Membuat tombol bulat
                   ),
-                  padding: EdgeInsets.symmetric(horizontal: 80, vertical: 16),
+                  padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 16),
                 ),
                 onPressed: () {
                   // Navigasi ke halaman IvanPage setelah login berhasil
@@ -111,14 +111,14 @@ class LoginPasienPage extends StatelessWidget {
                             DoctorHome()), // Ganti dengan halaman yang sesuai
                   );
                 },
-                child: Text(
+                child: const Text(
                   'LOGIN',
                   style: TextStyle(fontSize: 16, color: Colors.white),
                 ),
               ),
             ),
             const SizedBox(height: 24),
-            Center(
+            const Center(
               child: Text(
                 'OR',
                 style: TextStyle(
@@ -128,7 +128,7 @@ class LoginPasienPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16),
-            Center(
+            const Center(
               child: Text(
                 'LOG in with',
                 style: TextStyle(
@@ -190,7 +190,7 @@ class LoginPasienPage extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => Register()),
                   );
                 },
-                child: Text.rich(
+                child: const Text.rich(
                   TextSpan(
                     text: "Don't have an account? ",
                     style: TextStyle(color: Colors.black54),

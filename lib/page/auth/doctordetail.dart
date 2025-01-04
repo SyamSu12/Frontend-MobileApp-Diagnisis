@@ -10,6 +10,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,6 +21,8 @@ class MyApp extends StatelessWidget {
 }
 
 class NutritionistDetailsPage extends StatefulWidget {
+  const NutritionistDetailsPage({super.key});
+
   @override
   _NutritionistDetailsPageState createState() =>
       _NutritionistDetailsPageState();
@@ -88,7 +92,7 @@ class _NutritionistDetailsPageState extends State<NutritionistDetailsPage> {
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () {
             Navigator.of(context).pop();
           },
@@ -99,32 +103,32 @@ class _NutritionistDetailsPageState extends State<NutritionistDetailsPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Center(
+            const Center(
               child: Text(
                 'Nutritionist Details',
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             Row(
               children: [
                 Container(
                   width: 80,
                   height: 80,
                   decoration: BoxDecoration(
-                    image: DecorationImage(
+                    image: const DecorationImage(
                       image: AssetImage('assets/images/booking.png'),
                       fit: BoxFit.cover,
                     ),
                     borderRadius: BorderRadius.circular(8),
                   ),
                 ),
-                SizedBox(width: 16),
-                Column(
+                const SizedBox(width: 16),
+                const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Nutritionist Alex',
+                      'Mr. Ivan',
                       style:
                           TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     ),
@@ -137,12 +141,12 @@ class _NutritionistDetailsPageState extends State<NutritionistDetailsPage> {
                 ),
               ],
             ),
-            SizedBox(height: 24),
-            Text(
+            const SizedBox(height: 24),
+            const Text(
               'DATE',
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: dates
@@ -153,7 +157,7 @@ class _NutritionistDetailsPageState extends State<NutritionistDetailsPage> {
                           });
                         },
                         child: Container(
-                          padding: EdgeInsets.symmetric(
+                          padding: const EdgeInsets.symmetric(
                               vertical: 12, horizontal: 16),
                           height: 70,
                           width: 70,
@@ -173,14 +177,14 @@ class _NutritionistDetailsPageState extends State<NutritionistDetailsPage> {
                             children: [
                               Text(
                                 date.split(' ')[0],
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
                               Text(
                                 date.split(' ')[1],
-                                style: TextStyle(fontSize: 14),
+                                style: const TextStyle(fontSize: 14),
                               ),
                             ],
                           ),
@@ -188,12 +192,12 @@ class _NutritionistDetailsPageState extends State<NutritionistDetailsPage> {
                       ))
                   .toList(),
             ),
-            SizedBox(height: 24),
-            Text(
+            const SizedBox(height: 24),
+            const Text(
               'TIME',
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Center(
               child: Wrap(
                 spacing: 16,
@@ -207,7 +211,7 @@ class _NutritionistDetailsPageState extends State<NutritionistDetailsPage> {
                             });
                           },
                           child: Container(
-                            padding: EdgeInsets.symmetric(
+                            padding: const EdgeInsets.symmetric(
                                 vertical: 8, horizontal: 16),
                             decoration: BoxDecoration(
                               color: selectedTime == time
@@ -222,14 +226,14 @@ class _NutritionistDetailsPageState extends State<NutritionistDetailsPage> {
                             ),
                             child: Text(
                               time,
-                              style: TextStyle(fontSize: 16),
+                              style: const TextStyle(fontSize: 16),
                             ),
                           ),
                         ))
                     .toList(),
               ),
             ),
-            SizedBox(height: 32),
+            const SizedBox(height: 32),
             Center(
               child: ElevatedButton(
                 onPressed: () {
@@ -242,13 +246,14 @@ class _NutritionistDetailsPageState extends State<NutritionistDetailsPage> {
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.black,
-                  padding: EdgeInsets.symmetric(horizontal: 60, vertical: 12),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 60, vertical: 12),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
-                    side: BorderSide(color: Colors.green, width: 4),
+                    side: const BorderSide(color: Colors.green, width: 4),
                   ),
                 ),
-                child: Text(
+                child: const Text(
                   'DONE',
                   style: TextStyle(color: Colors.white, fontSize: 16),
                 ),
@@ -258,7 +263,7 @@ class _NutritionistDetailsPageState extends State<NutritionistDetailsPage> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.settings, size: 30, color: Colors.black),
             label: 'Settings',

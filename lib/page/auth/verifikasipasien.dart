@@ -21,7 +21,7 @@ class _VerifyPageState extends State<Verifikasipasien> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () {
             Navigator.of(context).pop();
           },
@@ -33,7 +33,7 @@ class _VerifyPageState extends State<Verifikasipasien> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
+              const Text(
                 'VERIFY YOUR NUMBER',
                 style: TextStyle(
                   fontSize: 24,
@@ -41,12 +41,12 @@ class _VerifyPageState extends State<Verifikasipasien> {
                 ),
               ),
               const SizedBox(height: 16),
-              Text(
+              const Text(
                 'Please Enter The 4 Digit Code Sent To',
                 style: TextStyle(fontSize: 16),
               ),
               const SizedBox(height: 8),
-              Text(
+              const Text(
                 '+6281379625386', // Nomor yang dikirimkan kode verifikasi
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
@@ -67,17 +67,17 @@ class _VerifyPageState extends State<Verifikasipasien> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30),
                   ),
-                  padding: EdgeInsets.symmetric(horizontal: 100, vertical: 16),
+                  padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 16),
                 ),
                 onPressed: () {
                   // Langsung pindah ke halaman CreateNewPasswordPage tanpa verifikasi kode
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => CreateNewPasswordPage()),
+                        builder: (context) => const CreateNewPasswordPage()),
                   );
                 },
-                child: Text(
+                child: const Text(
                   'VERIFY',
                   style: TextStyle(fontSize: 16, color: Colors.white),
                 ),
@@ -97,11 +97,11 @@ class _VerifyPageState extends State<Verifikasipasien> {
         controller: controller,
         keyboardType: TextInputType.number,
         textAlign: TextAlign.center,
-        style: TextStyle(fontSize: 24),
+        style: const TextStyle(fontSize: 24),
         maxLength: 1, // Membatasi hanya 1 digit
         decoration: InputDecoration(
           hintText: '0', // Tampilkan '0' sebagai placeholder
-          hintStyle: TextStyle(fontSize: 24, color: Colors.black54),
+          hintStyle: const TextStyle(fontSize: 24, color: Colors.black54),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
           ),

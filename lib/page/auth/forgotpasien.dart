@@ -5,15 +5,17 @@ class Forgotpasien extends StatelessWidget {
   final TextEditingController _phoneController =
       TextEditingController(text: "+6281379625386");
 
+  Forgotpasien({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 221, 246, 221),
+      backgroundColor: const Color.fromARGB(255, 221, 246, 221),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () {
             Navigator.of(context).pop(); // Navigasi kembali
           },
@@ -25,7 +27,7 @@ class Forgotpasien extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Align(
+              const Align(
                 alignment: Alignment.topCenter,
                 child: Column(
                   children: [
@@ -41,13 +43,13 @@ class Forgotpasien extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 16),
-              Text(
+              const SizedBox(height: 16),
+              const Text(
                 "Please Enter Your Register Mobile Number\nTo Receive a Verification Code",
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 16, color: Colors.black),
               ),
-              SizedBox(height: 40),
+              const SizedBox(height: 40),
               TextField(
                 controller: _phoneController,
                 keyboardType: TextInputType.phone,
@@ -56,14 +58,14 @@ class Forgotpasien extends StatelessWidget {
                   filled: true,
                   fillColor: Colors.white,
                   contentPadding:
-                      EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(25.0),
                     borderSide: BorderSide.none,
                   ),
                 ),
               ),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
@@ -72,19 +74,19 @@ class Forgotpasien extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => Verifikasipasien(),
+                        builder: (context) => const Verifikasipasien(),
                       ),
                     );
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.black,
-                    padding: EdgeInsets.symmetric(vertical: 16),
+                    padding: const EdgeInsets.symmetric(vertical: 16),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(25),
-                      side: BorderSide(color: Colors.green, width: 2),
+                      side: const BorderSide(color: Colors.green, width: 2),
                     ),
                   ),
-                  child: Text(
+                  child: const Text(
                     "SEND",
                     style: TextStyle(
                       color: Colors.white,
